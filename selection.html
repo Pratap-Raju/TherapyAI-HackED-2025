@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Options - AI Therapy</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="selection-page">
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Therapy AI</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- Selection Section -->
+    <section class="selection">
+        <h2>Let’s Get Started</h2>
+
+        <!-- Step 1: Identify the Emotion -->
+        <div id="step1" class="step step1-background">
+            <h3>How are you feeling today?</h3>
+            <div class="options emotion-options">
+                <button onclick="selectEmotion('sadness')">😢 Sadness</button>
+                <button onclick="selectEmotion('anger')">😠 Anger</button>
+                <button onclick="selectEmotion('anxiety')">😰 Anxiety</button>
+                <button onclick="selectEmotion('confusion')">🤔 Confusion</button>
+                <button onclick="selectEmotion('loneliness')">🫂 Loneliness</button>
+                <button onclick="selectEmotion('stress')">😫 Stress</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Choose a Response Style -->
+        <div id="step2" class="step hidden">
+            <h3>What do you need right now?</h3>
+            <div class="options response-options">
+                <button onclick="selectResponse('talk')">💬 Talk it out</button>
+                <button onclick="selectResponse('advice')">📚 Get advice</button>
+                <button onclick="selectResponse('relax')">🧘 Relax and reflect</button>
+                <button onclick="selectResponse('resources')">🔍 Find resources</button>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div id="submit" class="hidden">
+            <button onclick="submitSelections()">Continue to Chatbot</button>
+                <div id = "chat-interface" class="hidden">
+                <div class="chat-box" id="chat-box">
+                    <!-- Chat messages will appear here -->
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Type a message...">
+                    <button id="chat-send-btn">Send</button>
+                </div>
+            
+        </div>
+            <!-- Add this after the #submit button -->
+   
+    </section>
+
+    <!-- Link to JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
