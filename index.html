@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapy AI - Your Safe Place</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="video-background">
+        <source src="black-cat.mp4" type="video/mp4">
+        <!-- Fallback Image -->
+        <img src="images/fallback.jpg" alt="Fallback Image">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Therapy AI</div>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </nav>
+     <!-- Navigation Bar -->
+<nav>
+    <div class="logo">Therapy AI</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><button id="about-us-btn">About Us</button></li>
+        <li><button id="faq-btn">FAQ</button></li>
+    </ul>
+</nav>
+
+<dialog id="dialog-box">
+    <div class="dialog-content">
+        <span id="close-dialog-btn" class="close-btn">&times;</span>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-text"></p>
+    </div>
+</dialog>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const aboutUsBtn = document.getElementById("about-us-btn");
+        const faqBtn = document.getElementById("faq-btn");
+        const dialogBox = document.getElementById("dialog-box");
+        const closeDialogBtn = document.getElementById("close-dialog-btn");
+        const dialogTitle = document.getElementById("dialog-title");
+        const dialogText = document.getElementById("dialog-text");
+
+        function openDialog(title, text) {
+            dialogTitle.textContent = title;
+            dialogText.textContent = text;
+            dialogBox.showModal(); // Opens the dialog
+        }
+
+        aboutUsBtn.addEventListener("click", function () {
+            openDialog("About Us", "Welcome to Therapy AI, your compassionate companion in mental health and emotional well-being. At Therapy AI, we believe that everyone deserves access to support, guidance, and resources to navigate life's challenges. Our mission is to harness the power of advanced artificial intelligence to provide personalized, empathetic, and accessible mental health care. Whether you're feeling overwhelmed, anxious, or just need someone to talk to, Therapy AI is here to listen, understand, and guide you toward a brighter, healthier tomorrow. We are not a replacement for professional therapy, but we are here to offer support, tools, and a safe space to help you feel heard and empowered.");
+        });
+
+        faqBtn.addEventListener("click", function () {
+            openDialog("FAQ", "Here are some frequently asked questions about our service...A: Therapy AI uses cutting-edge natural language processing (NLP) to understand your emotions and provide tailored responses. Simply share how you're feeling and what you need, and our AI will guide you through conversations, relaxation techniques, or resources to help you feel better.Q: Is Therapy AI a replacement for professional therapy?A: No, Therapy AI is not a replacement for professional therapy. It is designed to provide immediate support, tools, and resources for everyday emotional challenges. For serious mental health concerns, we always recommend consulting a licensed therapist or mental health professional.Q: Is my data safe with Therapy AI?A: Yes, your privacy is our priority. All conversations with Therapy AI are confidential and securely encrypted. We do not store personal information without your consent.Q: Can I use Therapy AI for free?A: Yes, Therapy AI is completely free to use. We believe mental health support should be accessible to everyone, and we are committed to providing a free, safe, and supportive space for all users.Q: How can I get the most out of Therapy AI?A: Be openand honest about your feelings. The more you share, the better Therapy AI can understand and support you. Use the tools and resources provided to explore relaxation techniques, self-reflection, and actionable advice.");
+        });
+
+        closeDialogBtn.addEventListener("click", function () {
+            dialogBox.close(); // Closes the dialog
+        });
+
+        // Close dialog when clicking outside of it
+        dialogBox.addEventListener("click", function (event) {
+            if (event.target === dialogBox) {
+                dialogBox.close();
+            }
+        });
+    });
+</script>
+
+
+
+
+<!-- Hero Section -->
+    <header class="hero">
+        <h1>Welcome to Your Safe Place</h1>
+        <p>Experience confidential, accessible, and personalized mental health support 24/7.</p>
+        <a href="selection.html" class="btn">Let’s Get Started</a>
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Why Choose Therapy AI?</h3>
+            <ul>
+                <li><strong>Confidential & Secure:</strong> Your privacy is our top priority. All conversations are encrypted and completely private.</li>
+                <li><strong>24/7 Availability:</strong> Access support anytime, anywhere.</li>
+                <li><strong>Personalized Growth:</strong> AI-driven insights help track progress.</li>
+            </ul>
+            <p>© 2024 Therapy AI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
